@@ -1,13 +1,14 @@
 import express from 'express'
 import dotenv from 'dotenv'
+import cors from 'cors'
 dotenv.config()
 
 const app = express()
-
+app.use(cors())
 
 
 app.get('/', (req, res) =>{
-    res.send('NO BRUH')
+    res.send('234ee3')
 })
 
 app.get('/signup', (req, res) => {
