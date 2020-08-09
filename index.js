@@ -3,12 +3,15 @@ import dotenv from 'dotenv'
 import cors from 'cors'
 dotenv.config()
 
+
 const app = express()
+const port = 3000
+
 app.use(cors())
 
 
 app.get('/', (req, res) =>{
-    res.send('234ee3')
+    res.json({info: "huh"})
 })
 
 app.get('/signup', (req, res) => {
@@ -19,6 +22,6 @@ app.get('/signin', (req, res) => {
     
 })
 
-app.listen(2400, () => {
-    console.log(process.env.CLIENT_ID)
+app.listen(port, () => {
+    console.log(`listening on port ${port}`)
 })
